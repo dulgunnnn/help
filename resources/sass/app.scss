@@ -1,0 +1,323 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic-ext');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+
+// @import "font/flaticon";
+
+// @mixin gradient-text($angle: 45deg, $color: $blue, $amount: 35%) {
+//     color: $color;
+//     background: -webkit-linear-gradient($angle, $color, adjust-hue($color, $amount));
+//     -webkit-text-fill-color: transparent;
+//     -webkit-background-clip: text;
+//     display: inline-block;
+// }
+
+.text-primary{
+    color: $dark
+}
+  
+img, svg {
+    max-width: 100% !important;
+}
+
+.logo {
+    &:hover,
+    &:focus{
+        text-decoration: none;
+    }
+    svg {
+        height: 60px;
+    }
+}
+
+#logo-yam {
+	rect{fill:#003399;}
+	.logo-soyombo{
+        path {fill:#FFCC00;}
+    }
+    .logo-text-yam,
+    .logo-text-gov{
+        path {
+            fill:#FFFFFF;
+        }
+    }
+}
+
+#head-one{
+    #logo-esis {
+        path,
+        text{
+            fill: #FFF;
+        }
+    }
+}
+
+#head-two{
+    .logo {
+        svg{
+            height: 50px;
+        }
+    }
+    .logo-text-gov{
+        path {
+            fill:#003399;
+        }
+    }
+}
+.fas, 
+.fab,
+.far{
+    transition: transform .3s;
+}
+
+.logo {
+    img {
+        height: 50px;
+    }
+}
+
+.head-big{
+    @extend .border-0;
+    background-image: linear-gradient(90deg, #24a6a1 0%, #4081ff 50%, #744fc0 100%);
+}
+
+.divider{
+    width: 100px;
+    border-top: 3px solid $primary;
+}
+
+.my-link {
+    color: #212529;
+    font-size: 16px;
+    &.active {
+        border-bottom: 3px solid $primary;
+    }
+    @media screen and (min-width: 992px){
+        font-size: 20px;
+    }
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 20px!important;
+    opacity: 1;
+    height: fit-content;
+    align-items: normal;
+
+    i {
+        font-size: 1rem;
+    }
+}
+
+#carouselCardControls {
+    .carousel-indicators {
+        bottom: -1rem !important;
+    }
+}
+
+.help-block {
+    transition: all 170ms ease;
+    transform: translate3d(0, 0, 0);
+    svg{
+        width: 64px;
+        height: 64px;
+        margin: auto;
+    }
+    &:hover{
+        @extend  .shadow-lg;
+        text-decoration: none;
+        border: 1px solid #ccc;
+        background: #625fd5;
+        transform: scale(1.075) rotate(0.0001deg);
+        color: #fff;
+        .text-dark,
+        .text-primary{
+            color: $white !important;
+        }
+    }
+}
+
+.list-last {
+    &:hover{
+        background: #f8f9fa;
+    }
+}
+
+.dropdown {
+    &:hover {
+        > .dropdown-menu{
+            display: block !important;
+        }
+    }
+}
+
+#main-nav{
+    .nav-link {
+        @extend .text-white;
+    }
+    .navbar-brand, 
+    .nav-item.active .nav-link{
+        @extend .position-relative;
+        &:before{
+            @extend .position-absolute, .bg-white, .w-100, .d-block;
+            content: "";
+            height: 4px;
+            top:53px;
+            left:0;
+        }
+    }
+}
+
+.accordion a[aria-expanded="true"]{
+    @extend .font-weight-bold;
+}
+
+.gsc-control-cse{
+    * {
+        font-family: 'PT Sans' !important;
+    }
+    @extend .border-0, .p-0;
+    background: transparent !important;
+    
+    .gsc-url-top,
+    .gcsc-more-maybe-branding-root{
+        @extend .d-none;
+    }
+    .gs-title {
+        @extend .text-dark,.font-weight-bold;
+        text-decoration: none !important;
+        b{
+            @extend .text-primary;
+            font-weight: 700 !important;
+        }
+        &:hover{
+            text-decoration: underline !important;
+        }
+    }
+    .gsc-above-wrapper-area {
+        display: none;
+    }
+    .gsc-results {
+        @extend .w-100 ;
+    }
+    .gsc-webResult.gsc-result{
+        @extend .border-0, .w-100, .m-0;
+        background: transparent !important;
+        // > .gs-webResult.gs-result{
+        //     display: none;
+        // }
+        .gs-fileFormat{
+            @extend .font-weight-bold;
+            .gs-fileFormat, 
+            .gs-fileFormatType{
+                @extend .text-muted;
+            }
+        }
+    }
+    .gsc-expansionArea{
+        @extend .row, .d-flex, .align-items-stretch;
+        .gsc-webResult.gsc-result{
+            @extend .col-md-4, .d-flex, .align-items-stretch;
+
+            .gs-webResult.gs-result{
+                @extend .card, .p-3, .mb-3;
+                display: block;
+                &:hover{
+                    @extend .shadow;
+                }
+            }
+        }
+    }
+    .gsc-cursor-box {
+        @extend .w-100, .m-0, .text-center, .p-3;
+
+        &::before{
+            @extend .clearfix;
+        }
+
+        .gsc-cursor {
+            @extend .btn-group, .mt-3;
+            .gsc-cursor-page{
+                @extend .btn, .btn-primary, .m-0;
+                &.gsc-cursor-current-page{
+                    @extend .btn-dark;
+                }
+            }
+        }
+    }
+    .gs-no-results-result {
+        .gs-snippet {
+            @extend .alert, .alert-warning, .m-0;
+            font-size: 1rem !important;
+        }
+    }
+}
+
+footer {
+    @extend .mt-5;
+}
+
+.single-content {
+    @extend .overflow-hidden;
+
+    img,
+    input {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    table {
+        @extend .table, .table-bordered, .table-striped, .w-100 ;
+        td {
+            p {
+                @extend .m-0;
+            }
+        }
+    }
+}
+
+.task-list-icon{
+    display: inline-block;
+    width: 12.5px;
+    height: 14px ;
+    background-image: url("./images/task-icon.svg");
+    background-size: 12.5px  14px;
+    background-repeat: no-repeat;
+}
+.head-title{
+    font-size: 32px;
+}
+.search-head{
+    padding-top: 75px;
+}
+
+.head-icon {
+    svg {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+.toTop {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 99;
+    opacity: 0;
+    cursor: pointer;
+    transition: all 500ms ease;
+    &.active{
+        opacity: 1;
+    }
+}
+
+@import 'responsive';

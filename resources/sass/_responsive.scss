@@ -1,0 +1,48 @@
+@media (max-width: 1199.98px) {
+    .logo {
+        svg {
+            height: 40px;
+        }
+    }
+    .search-head{
+        padding-top: 60px;
+    }
+    body {
+        line-height: 16px;
+        font-size: 12px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+    h5 {
+      font-size: 14px;
+    }
+    .help-block {
+        svg{
+            width: 50px;
+            height: 50px;
+            margin: auto;
+        }
+    }
+    .head-title {
+        font-size: 24px;
+    }
+}
+@media (max-width: 992px) {
+    .task-list-icon{
+        background-size: 10px  15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .task-list-icon{
+        background-size: 10px  15px;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .task-list-icon{
+        background-size: 9px  15px;
+    }
+}
