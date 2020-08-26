@@ -1,7 +1,7 @@
-    <div class="text-center">
+    <!-- <div class="text-center">
         <h5>ЕБС-ийн цахим гарын авлага</h5>
         <hr class="divider my-0 my-xl-3 my-lg-1">
-    </div>
+    </div> -->
 
     <div class="row my-xl-3 my-2 d-flex align-items-stretch">
         <div class="col-md-4 d-flex align-items-stretch">

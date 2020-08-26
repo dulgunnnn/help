@@ -96,14 +96,22 @@ img, svg {
     border-top: 3px solid $primary;
 }
 
-.my-link {
-    color: #212529;
-    font-size: 16px;
-    &.active {
-        border-bottom: 3px solid $primary;
-    }
-    @media screen and (min-width: 992px){
-        font-size: 20px;
+.home-nav {
+    .nav-link {
+        color: #212529;
+        padding: 1rem;
+        font-size: 13px;
+        @media only screen and (min-width: 992px) {
+            font-size: 24px;
+            padding: 1rem 1.5rem;
+        }
+        &.active {
+            border-bottom: 3px solid #1e90ff;
+        }
+        &:hover {
+            border-bottom: 3px solid #625fd5;
+            
+        }
     }
 }
 
@@ -115,12 +123,6 @@ img, svg {
 
     i {
         font-size: 1rem;
-    }
-}
-
-#carouselCardControls {
-    .carousel-indicators {
-        bottom: -1rem !important;
     }
 }
 

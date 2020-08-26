@@ -1,8 +1,8 @@
     
-    <div class="text-center">
+    <!-- <div class="text-center">
         <h5>СӨБ-ын цахим гарын авлага</h5>
         <hr class="divider my-0">
-    </div>
+    </div> -->
     <div class="row my-xl-3 my-2 d-flex align-items-stretch">
         <div class="col-md-4 d-flex  align-items-stretch">
             <div class="card card-body my-xl-3 my-lg-2 p-xl-3 py-lg-2 px-lg-3 my-2 rounded-lg text-center help-block shadow">

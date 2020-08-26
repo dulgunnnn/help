@@ -3,38 +3,25 @@
 @section('content')
     
     @include('pages.head')
-
+    <!-- Set up your HTML -->
     <div class="container mt-sm-4 my-lg-3 mt-4 mb-3 mt-lg-5">
-        <div id="carouselCardControls" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    @include('pages.cat-2')
-                </div>
-                <div class="carousel-item">
-                    @include('pages.cat-1')
-                </div>
-                <div class="carousel-item">
-                    @include('pages.cat-3')
-                </div>
-                <div class="carousel-item">
-                    @include('pages.cat-4')
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselCardControls" role="button" data-slide="prev">
-                <i class="fas fa-arrow-left text-primary"></i>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselCardControls" role="button" data-slide="next">
-                <i class="fas fa-arrow-right text-primary"></i>
-                <span class="sr-only">Next</span>
-            </a>
+
+    <nav>
+        <!-- <h4 class="mb-0 text-center">Гарын авлага</h4> -->
+        <div class="nav home-nav d-flex justify-content-center" id="nav-tab" role="tablist">
+            <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">ЕБС</a>
+            <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">СӨБ</a>
+            <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Эцэг эх</a>
+            <a class="nav-link" id="nav-contact2-tab" data-toggle="tab" href="#nav-contact2" role="tab" aria-controls="nav-contact2" aria-selected="false">НТБ</a>
         </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"> @include('pages.cat-2')</div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"> @include('pages.cat-1')</div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"> @include('pages.cat-3')</div>
+        <div class="tab-pane fade" id="nav-contact2" role="tabpanel" aria-labelledby="nav-contact2-tab"> @include('pages.cat-4')</div>
+    </div>
+
     </div>
 
     <div class="bg-white border-top py-xl-4 py-lg-3  border-bottom">
